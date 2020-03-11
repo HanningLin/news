@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google News</title>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!-- Load d3-cloud -->
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="div-cover">
+    <div id="div_left">
+        <table class="tb_button">
+            <tr class="tr_button">
+                <td class="td_button">
+                    <button type="button" onclick="btn_google_news()" class="nav_button" id="btn_news">Google News</button>
+                </td>
+            </tr>
+            <tr class="tr_button">
+                <td class="td_button">
+                    <button type="button" onclick="btn_search()" class="nav_button" id="btn_search">Search</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div id="div_right">
+        <!-- pic header        -->
+        <div class="headerpic">
+            <!-- pic header        -->
+            <table class="tb_headerpic">
+                <tr>
+                    <td class="td-cover">
+                        <a id="card_1_href" href="" target="_blank"><div class="header-cover">
+                            <div class="img-header-cover"><img id="card_1_img" class="img-header" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt=""><div class="div-img-text">
+                                <span class="span-header-title" id="card_1_title">Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</span>
+                                <br>
+                                <br>
+                                <span class="span-header-description" id="card_1_description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                            </div></div>
+                            <!--                            <img class="img-header" id="img_header_left" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400"  alt="">-->
+
+                        </div></a>
+
+                    </td>
+                    <td class="td-cover">
+                        <div id="word_cloud"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <!-- CNN        -->
+        <div class="padding-box">
+            <h2 class="h2_CNN">CNN</h2>
+        </div>
+
+        <table class="tb_news">
+            <!--#1-->
+            <tr>
+
+                <td>
+                    <a class="nocolor" id="CNN-href-1" href="http://baidu.com" target="_blank">
+                        <div class = "div_news_cover_CNN">
+                            <div class="img-CNN-cover">
+                                <img id="CNN-img-1" class="img-CNN" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt="">
+                            </div>
+
+                            <div class="div_new_CNN">
+                                <span id="CNN-title-1" class="span-CNN-title"><b>Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</b></span>
+                                <br>
+                                <br>
+                                <span id="CNN-description-1" class="span-CNN-description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                            </div>
+                        </div>
+
+                    </a>
+                    </td>
+            <!--#2-->
+
+                <td>
+                    <a class="nocolor" id="CNN-href-2" href="http://baidu.com" target="_blank">
+                        <div class = "div_news_cover_CNN">
+                            <div class="img-CNN-cover">
+                                <img id="CNN-img-2" class="img-CNN" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt="">
+                            </div>
+
+                            <div class="div_new_CNN">
+                                <span id="CNN-title-2" class="span-CNN-title"><b>Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</b></span>
+                                <br>
+                                <br>
+                                <span id="CNN-description-2" class="span-CNN-description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                            </div>
+                        </div>
+                    </a>
+                </td>
+            <!--#3-->
+
+                <td>
+                    <a class="nocolor" id="CNN-href-3" href="http://baidu.com" target="_blank">
+                        <div class = "div_news_cover_CNN">
+                            <div class="img-CNN-cover">
+                                <img id="CNN-img-3" class="img-CNN" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt="">
+                            </div>
+
+                            <div class="div_new_CNN">
+                                <span id="CNN-title-3" class="span-CNN-title"><b>Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</b></span>
+                                <br>
+                                <br>
+                                <span id="CNN-description-3" class="span-CNN-description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                            </div>
+                        </div>
+                    </a>
+                </td>
+            <!--#4-->
+
+                <td>
+                    <a class="nocolor" id="CNN-href-4" href="http://baidu.com" target="_blank">
+                        <div class = "div_news_cover_CNN">
+                            <div class="img-CNN-cover">
+                                <img id="CNN-img-4" class="img-CNN" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt="">
+                            </div>
+
+                            <div class="div_new_CNN">
+                                <span id="CNN-title-4" class="span-CNN-title"><b>Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</b></span>
+                                <br>
+                                <br>
+                                <span id="CNN-description-4" class="span-CNN-description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                            </div>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!-- FOX        -->
+        <div class="padding-box">
+            <h2 class="h2_CNN">FOX</h2>
+        </div>
+
+        <table class="tb_news">
+            <!--#1-->
+            <tr>
+                <td>
+                    <a class="nocolor" id="FOX-href-1" href="" target="_blank">
+                        <div class = "div_news_cover_CNN">
+                            <div class="img-CNN-cover">
+                                <img id="FOX-img-1" class="img-CNN" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt="">
+                            </div>
+
+                            <div class="div_new_CNN">
+                                <span id="FOX-title-1" class="span-CNN-title"><b>Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</b></span>
+                                <br>
+                                <br>
+                                <span id="FOX-description-1" class="span-CNN-description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                            </div>
+                        </div>
+                    </a>
+                    </td>
+                <!--#2-->
+                <td>
+                    <a class="nocolor" id="FOX-href-2" href="" target="_blank">
+                        <div class = "div_news_cover_CNN">
+                            <div class="img-CNN-cover">
+                                <img id="FOX-img-2" class="img-CNN" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt="">
+                            </div>
+
+                            <div class="div_new_CNN">
+                                <span id="FOX-title-2" class="span-CNN-title"><b>Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</b></span>
+                                <br>
+                                <br>
+                                <span id="FOX-description-2" class="span-CNN-description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                            </div>
+                        </div>
+                    </a>
+                </td>
+                <!--#3-->
+                <td>
+                    <a class="nocolor" id="FOX-href-3" href="" target="_blank">
+                        <div class = "div_news_cover_CNN">
+                            <div class="img-CNN-cover">
+                                <img id="FOX-img-3" class="img-CNN" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt="">
+                            </div>
+
+                            <div class="div_new_CNN">
+                                <span id="FOX-title-3" class="span-CNN-title"><b>Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</b></span>
+                                <br>
+                                <br>
+                                <span id="FOX-description-3" class="span-CNN-description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                            </div>
+                        </div>
+                    </a>
+                </td>
+                <!--#4-->
+                <td>
+                    <a class="nocolor" id="FOX-href-4" href="" target="_blank">
+                        <div class = "div_news_cover_CNN">
+                        <div class="img-CNN-cover">
+                            <img id="FOX-img-4" class="img-CNN" src="https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400" alt="">
+                        </div>
+
+                        <div class="div_new_CNN">
+                            <span id="FOX-title-4" class="span-CNN-title"><b>Fed president Neel Kashkari tears into 'giant garbage dumpster' cryptocurrencies</b></span>
+                            <br>
+                            <br>
+                            <span id="FOX-description-4" class="span-CNN-description">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</span>
+                        </div>
+                    </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <div id="div_right_search">
+        <div id="div_right_search_top">
+            <form action="submit()">
+                <label>Keyword<span style="color:red;">* </span></label> <input id="input_keyword" type="text" name="keyword" value="" required>
+                <label>From<span style="color:red;">* </span></label><input id="input_date_from" type="date" name="from" value="" required>
+                <label>To<span style="color:red;">* </span></label><input id="input_date_to" type="date" name="to" value="" required>
+                <br>
+                <br>
+                <span>Category</span>
+                <select name="category" id="select_category" onchange="getSource()">
+                    <option value="all">all</option>
+                    <option value="Business">Business</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="General">General</option>
+                    <option value="Health">Health</option>
+                    <option value="Science">Science</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Technology">Technology</option>
+                </select>
+                <span>Source</span>
+                <!--            dynamic-->
+                <select name="source" id="select_source">
+
+                </select>
+                <br>
+                <br>
+                <button type="button" onclick="search_search()" class="button_search_search" id="btn_search_search">Search</button>
+                <button type="button" onclick="search_clear()" class="button_search_clear" id="btn_search_clear">Clear</button>
+            </form>
+        </div>
+
+        <div class="div_result_news_cover" id="div_result">
+            <div class="div_search-news" id="search-news-1" onclick="showMore(1)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-1" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-1" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-1" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-2" onclick="showMore(2)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-2" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-2" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-2" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-3" onclick="showMore(3)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-3" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-3" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-3" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-4" onclick="showMore(4)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-4" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-4" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-4" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-5" onclick="showMore(5)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-5" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-5" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-5" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div id = "search_showmore_button_cover" ><button type="button" onclick="showMoreArticles()" id="btn_showMoreArticles">Show More</button></div>
+            <div class="div_search-news" id="search-news-6" onclick="showMore(6)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-6" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-6" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-6" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-7" onclick="showMore(7)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-7" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-7" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-7" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-8" onclick="showMore(8)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-8" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-8" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-8" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                                Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-9" onclick="showMore(9)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-9" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-9" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-9" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                        Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-10" onclick="showMore(10)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-10" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-10" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-10" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                        Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-11" onclick="showMore(11)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-11" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-11" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-11" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                        Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-12" onclick="showMore(12)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-12" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-12" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-12" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                        Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-13" onclick="showMore(13)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-13" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-13" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-13" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                        Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-14" onclick="showMore(14)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-14" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-14" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-14" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                        Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div class="div_search-news" id="search-news-15" onclick="showMore(15)">
+                <div class="img-search-cover">
+                    <img id="search-news-img-15" class="search-pic" src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20200211140220_f2fe6c140ff2283d0af119084bae72ecb8fb8b3b03ec9b4fff0c272e1211ad41.jpeg" alt="">
+                </div>
+                <div class="content-cover">
+                    <span id="search-title-15" class="span-search-title"><b>Em tempos de coronavírus, não nos esqueçamos da gripe, do sarampo, da dengue... - Brasil 247</b></span>
+                    <br>
+                    <span id="search-description-15" class="span-search-description"><p class="oneline">Cryptocurrencies are "like a giant garbage dumpster" and lack the basic characteristics of any stable currency,
+                        Minneapolis Federal Reserve President Neel Kashkari said at an event on Tuesday. The Fed official praised the Securities and Exchange Commission fo…</p></span>
+                </div>
+
+            </div>
+            <div id = "search_showless_button_cover" ><button type="button" onclick="showLessArticles()" id="btn_showLessArticles">Show Less</button></div>
+            <div id="no_result">No Result</div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var timerCardIndex = 1;
+    var globalHeadlinesCardJson;
+    var search_result;
+    var lessnum;
+    var form = document.querySelector('form');
+    function delete_this(id) {
+        this.event.stopPropagation();
+        var article = search_result.articles[id - 1];
+        var cover = document.getElementById("search-news-" + id);
+
+        cover.innerHTML = '<div class="img-search-cover">\n' +
+            '                    <img id="search-news-img-'+id+'" class="search-pic" src="'+article.urlToImage+'" alt="">\n' +
+            '                </div>\n' +
+            '                <div class="content-cover">\n' +
+            '                    <span id="search-title-'+id+'" class="span-search-title"><b>'+article.title+'</b></span>\n' +
+            '                    <br>\n' +
+            '                    <span id="search-description-'+id+'" class="span-search-description"><p class="oneline">'+article.description+'</p></span>\n' +
+            '                </div>';
+        cover.addEventListener("click", func, false);
+        function func(){
+            showMore(id);
+        }
+    }
+    function showMore(id) {//show more content
+        this.event.stopPropagation();
+        var cover = document.getElementById("search-news-" + id);
+        temp = document.getElementById("myX");
+        if (temp != null) {
+            cover.removeChild(temp);
+        }
+
+        var article = search_result.articles[id - 1];
+        var yyyy = article.publishedAt.substring(0, 4);
+        var mm = article.publishedAt.substring(5, 2);
+        var dd = article.publishedAt.substring(8, 2);
+        var date = ''+mm+'/'+dd+'/'+yyyy;
+        var e_span = document.getElementById("search-description-" + id);
+        e_span.innerHTML =
+            '<div>' +
+            '<p><b>Author:</b>'+article.author+'</p>' +
+            '<p><b>Source:</b>'+article.source.name+'</p>' +
+            '<p><b>Date:</b>'+ date+'</p>' +
+            '<p style="word-wrap: break-word; white-space: normal">'+article.description+'</p>' +
+            '<a target="_blank" class="blue_herf" href=" '+ article.url+'">See Original Post</a>' +
+            '</div>';
+
+        cover.onclick = null; //remove onclick
+
+
+        cover.innerHTML += "<span id=\"myX\" onclick = 'delete_this("+id+")'>×</span>";
+        // return false;
+
+    }
+    
+    function showLessArticles() {
+        document.getElementById("search_showless_button_cover").style.display = 'none';
+        document.getElementById("search_showmore_button_cover").style.display = 'block';
+        var articles = search_result.articles;
+        for (var i = 5; i < lessnum; i++) {
+            document.getElementById("search-news-" + (i+1)).style.display = 'none';
+        }
+    }
+    function showMoreArticles() {
+        document.getElementById("search_showmore_button_cover").style.display = 'none';
+        var articles = search_result.articles;
+        lessnum = search_result.num;
+        if (lessnum > 15) {
+            lessnum = 15;
+        }
+        for (var i = 5; i < lessnum; i++) {
+            document.getElementById("search-news-img-" + (i+1)).setAttribute("src",articles[i]["urlToImage"])
+            document.getElementById("search-title-" + (i+1)).innerHTML = '<b>'+articles[i]["title"]+'</b>'
+            document.getElementById("search-description-" + (i+1)).innerHTML =  '<p class="oneline">' + articles[i]["description"] + '</p>';
+            document.getElementById("search-news-" + (i+1)).style.display = 'flex';
+        }
+        document.getElementById("search_showless_button_cover").style.display = 'block';
+    }
+    function initSearch() {
+        document.getElementById("input_keyword").value = '';
+        document.getElementById("input_date_to").valueAsDate = new Date();
+        document.getElementById("input_date_from").valueAsDate = new Date((new Date).getTime() - (6 * 24 * 60 * 60 * 1000));
+        getSource();
+    }
+    function getSource() {
+        var categories = document.getElementById('select_category');
+        var category = categories.options[categories.selectedIndex].value;
+        var XHR = new XMLHttpRequest();
+        XHR.open("GET","http://localhost:5000/api/source?category="+category,true);
+        XHR.onreadystatechange = function () {
+            console.log("Status is: "+this.status);
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                var sources_json = JSON.parse(XHR.responseText);
+                // add options
+                var sources = sources_json.sources;
+                var obj = document.getElementById('select_source');
+                obj.options.add(new Option("all","all"));
+                for (var i = 0; i < sources.length; i++) {
+                    // var obj = document.getElementById('select_source');
+                    obj.options.add(new Option(sources[i].name,sources[i].id));
+                }
+            }
+        }
+        XHR.send(null);
+        var sources = document.getElementById('select_source');
+
+        sources.options.length = 0;
+
+    }
+    window.onload=initSearch();
+
+    function search_search() {
+        if(form.reportValidity() == false) {
+            return null;
+        }
+        document.getElementById("no_result").style.display = 'none';
+        document.getElementById("search_showless_button_cover").style.display = 'none';
+        document.getElementById("search_showmore_button_cover").style.display = 'none';
+        for (var i = 0; i < 15; i++) {
+            document.getElementById("search-news-" + (i+1)).style.display = 'none';
+        }
+        var keyword_input = document.getElementById('input_keyword').value;
+        var dateFrom = document.getElementById('input_date_from').value;
+        var dateTo = document.getElementById('input_date_to').value;
+        var categories = document.getElementById('select_category');
+        var category = categories.options[categories.selectedIndex].value;
+        var sources = document.getElementById('select_source');
+        var source = sources.options[sources.selectedIndex].value;
+        var XHR = new XMLHttpRequest();
+        XHR.open("GET","http://localhost:5000/api/search_news?keyword="+keyword_input+"&dateFrom="+dateFrom+"&dateTo="+dateTo+"&category="+category+"&source="+source, true);
+        XHR.onreadystatechange = function () {
+            console.log("Status is: "+this.status);
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                search_result = JSON.parse(XHR.responseText);
+                if (search_result.status == 'error') {
+                    alert(search_result.message);
+                } else if (search_result.num == 0){
+                    document.getElementById("no_result").style.display = 'block';
+                } else {
+                    var articles = search_result.articles;
+                    if (search_result.num <= 5){
+                        for (var i = 0; i < search_result.num; i++) {
+                            document.getElementById("search-news-img-" + (i+1)).setAttribute("src",articles[i]["urlToImage"]);
+                            document.getElementById("search-title-" + (i+1)).innerHTML = '<b>'+articles[i]["title"]+'</b>';
+                            document.getElementById("search-description-" + (i+1)).innerHTML =  '<p class="oneline">' + articles[i]["description"] + '</p>';
+                            document.getElementById("search-news-" + (i+1)).style.display = 'flex';
+                        }
+                    } else {
+                        for (var i = 0; i < 5; i++) {
+                            document.getElementById("search-news-img-" + (i+1)).setAttribute("src",articles[i]["urlToImage"]);
+                            document.getElementById("search-title-" + (i+1)).innerHTML = '<b>'+articles[i]["title"]+'</b>';
+                            document.getElementById("search-description-" + (i+1)).innerHTML =  '<p class="oneline">' + articles[i]["description"] + '</p>';
+                            document.getElementById("search-news-" + (i+1)).style.display = 'flex';
+                        }
+                        document.getElementById("search_showmore_button_cover").style.display = 'block';
+                    }
+                }
+            }
+        }
+        XHR.send(null);
+        var sources = document.getElementById('select_source');
+    }
+    function search_clear() {
+        initSearch();
+        document.getElementById('select_category').selectedIndex = 0;
+        document.getElementById('select_source').selectedIndex = 0;
+        document.getElementById("search_showmore_button_cover").style.display = 'none';
+        document.getElementById("no_result").style.display = 'none';
+        document.getElementById("search_showless_button_cover").style.display = 'none';
+        for (var i = 0; i < 15; i++) {
+            document.getElementById("search-news-" + (i+1)).style.display = 'none';
+        }
+
+    }
+    function  btn_google_news() {
+        var t = document.getElementById('div_right_search');//search
+        t.style.display = 'none';   // 隐藏选择的元素
+        var t_btn = document.getElementById('btn_news');
+        t_btn.style.background = '#555555';
+        t_btn.style.color = '#fafafa';
+
+        var t1 = document.getElementById('div_right');//not search
+        t1.style.display = 'block';  // 以块级样式显示
+        var t_btn_search = document.getElementById('btn_search');
+        t_btn_search.style.background = 'lightgray';
+        t_btn_search.style.color = '#000000';
+    }
+    function btn_search() {
+        var t = document.getElementById('div_right_search');//search
+        t.style.display = 'block';  // 以块级样式显示
+        var t_btn = document.getElementById('btn_news');
+        t_btn.style.background = 'lightgray';
+        t_btn.style.color = '#000000';
+
+
+        var t1 = document.getElementById('div_right');//not search
+        t1.style.display = 'none';   // 隐藏选择的元素
+        var t_btn_search = document.getElementById('btn_search');
+        t_btn_search.style.background = '#555555';
+        t_btn_search.style.color = '#fafafa';
+    }
+    function render_html(){
+        btn_google_news();
+        get_headlines_card_json();
+        get_headlines_cnn_json();
+        get_headlines_fox_json();
+        // rerender();
+    }
+    // function rerendor() {
+    //
+    // }
+    
+    function refreshCard(){
+        document.getElementById("card_1_img").setAttribute("src",globalHeadlinesCardJson["articles"][timerCardIndex % 5]["urlToImage"]);
+        document.getElementById("card_1_title").innerHTML = globalHeadlinesCardJson["articles"][timerCardIndex % 5]["title"];
+        document.getElementById("card_1_description").innerHTML = globalHeadlinesCardJson["articles"][timerCardIndex % 5]["description"];
+        document.getElementById("card_1_href").setAttribute("href",globalHeadlinesCardJson["articles"][timerCardIndex % 5]["url"]);
+        timerCardIndex++;
+    }
+    function get_headlines_card_json() {
+        var XHR = new XMLHttpRequest();
+        XHR.open("GET","http://localhost:5000/api/headlines_card_json",true);
+        XHR.onreadystatechange = function () {
+            console.log("Status is: "+this.status);
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                var headlines_card_json = JSON.parse(XHR.responseText);
+                document.getElementById("card_1_img").setAttribute("src",headlines_card_json["articles"][0]["urlToImage"]);
+                document.getElementById("card_1_title").innerHTML = headlines_card_json["articles"][0]["title"];
+                document.getElementById("card_1_description").innerHTML = headlines_card_json["articles"][0]["description"];
+                document.getElementById("card_1_href").setAttribute("href",headlines_card_json["articles"][0]["url"]);
+                globalHeadlinesCardJson = headlines_card_json;
+                var cardTimer = setInterval(refreshCard,5000);
+
+            }
+        }
+        XHR.send();
+    }
+    function get_headlines_cnn_json() {
+        var XHR = new XMLHttpRequest();
+        XHR.open('GET','http://localhost:5000/api/headlines_CNN_json',true)
+        XHR.onreadystatechange = function () {
+            console.log("Status is: "+this.status);
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                var headlines_cnn_json = JSON.parse(XHR.responseText);
+                render_CNN(headlines_cnn_json);
+            }
+        }
+        XHR.send();
+    }
+    function get_headlines_fox_json() {
+        var XHR = new XMLHttpRequest();
+        XHR.open('GET','http://localhost:5000/api/headlines_FOX_json',true)
+        XHR.onreadystatechange = function () {
+            console.log("Status is: "+this.status);
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                var headlines_fox_json = JSON.parse(XHR.responseText);
+                render_FOX(headlines_fox_json);
+            }
+        }
+        XHR.send();
+
+    }
+    function render_CNN(headlines_cnn_json) {
+        document.getElementById("CNN-img-1").setAttribute("src",headlines_cnn_json["articles"][0]["urlToImage"]);
+        document.getElementById("CNN-title-1").innerHTML = headlines_cnn_json["articles"][0]["title"];
+        document.getElementById("CNN-title-1").style.fontWeight = 'bold';
+        document.getElementById("CNN-title-1").style.fontSize = '18px';
+        document.getElementById("CNN-description-1").innerHTML = headlines_cnn_json["articles"][0]["description"];
+        document.getElementById("CNN-description-1").style.fontSize = '15px';
+        document.getElementById("CNN-href-1").setAttribute("href",headlines_cnn_json["articles"][0]["url"]);
+
+
+        document.getElementById("CNN-img-2").setAttribute("src",headlines_cnn_json["articles"][1]["urlToImage"]);
+        document.getElementById("CNN-title-2").innerHTML = headlines_cnn_json["articles"][1]["title"];
+        document.getElementById("CNN-title-2").style.fontWeight = 'bold';
+        document.getElementById("CNN-title-2").style.fontSize = '18px';
+        document.getElementById("CNN-description-2").innerHTML = headlines_cnn_json["articles"][1]["description"];
+        document.getElementById("CNN-description-2").style.fontSize = '15px';
+        document.getElementById("CNN-href-2").setAttribute("href",headlines_cnn_json["articles"][1]["url"]);
+
+        document.getElementById("CNN-img-3").setAttribute("src",headlines_cnn_json["articles"][2]["urlToImage"]);
+        document.getElementById("CNN-title-3").innerHTML = headlines_cnn_json["articles"][2]["title"];
+        document.getElementById("CNN-title-3").style.fontWeight = 'bold';
+        document.getElementById("CNN-title-3").style.fontSize = '18px';
+        document.getElementById("CNN-description-3").innerHTML = headlines_cnn_json["articles"][2]["description"];
+        document.getElementById("CNN-description-3").style.fontSize = '15px';
+        document.getElementById("CNN-href-3").setAttribute("href",headlines_cnn_json["articles"][2]["url"]);
+
+        document.getElementById("CNN-img-4").setAttribute("src",headlines_cnn_json["articles"][3]["urlToImage"]);
+        document.getElementById("CNN-title-4").innerHTML = headlines_cnn_json["articles"][3]["title"];
+        document.getElementById("CNN-title-4").style.fontWeight = 'bold';
+        document.getElementById("CNN-title-4").style.fontSize = '18px';
+        document.getElementById("CNN-description-4").innerHTML = headlines_cnn_json["articles"][3]["description"];
+        document.getElementById("CNN-description-4").style.fontSize = '15px';
+        document.getElementById("CNN-href-4").setAttribute("href",headlines_cnn_json["articles"][3]["url"]);
+    }
+    function render_FOX(headlines_fox_json) {
+        document.getElementById("FOX-img-1").setAttribute("src",headlines_fox_json["articles"][0]["urlToImage"]);
+        document.getElementById("FOX-title-1").innerHTML = headlines_fox_json["articles"][0]["title"];
+        document.getElementById("FOX-title-1").style.fontWeight = 'bold';
+        document.getElementById("FOX-title-1").style.fontSize = '18px';
+        document.getElementById("FOX-description-1").innerHTML = headlines_fox_json["articles"][0]["description"];
+        document.getElementById("FOX-description-1").style.fontSize = '15px';
+        document.getElementById("FOX-href-1").setAttribute("href",headlines_fox_json["articles"][0]["url"]);
+
+        document.getElementById("FOX-img-2").setAttribute("src",headlines_fox_json["articles"][1]["urlToImage"]);
+        document.getElementById("FOX-title-2").innerHTML = headlines_fox_json["articles"][1]["title"];
+        document.getElementById("FOX-title-2").style.fontWeight = 'bold';
+        document.getElementById("FOX-title-2").style.fontSize = '18px';
+        document.getElementById("FOX-description-2").innerHTML = headlines_fox_json["articles"][1]["description"];
+        document.getElementById("FOX-description-2").style.fontSize = '15px';
+        document.getElementById("FOX-href-2").setAttribute("href",headlines_fox_json["articles"][1]["url"]);
+
+        document.getElementById("FOX-img-3").setAttribute("src",headlines_fox_json["articles"][2]["urlToImage"]);
+        document.getElementById("FOX-title-3").innerHTML = headlines_fox_json["articles"][2]["title"];
+        document.getElementById("FOX-title-3").style.fontWeight = 'bold';
+        document.getElementById("FOX-title-3").style.fontSize = '18px';
+        document.getElementById("FOX-description-3").innerHTML = headlines_fox_json["articles"][2]["description"];
+        document.getElementById("FOX-description-3").style.fontSize = '15px';
+        document.getElementById("FOX-href-3").setAttribute("href",headlines_fox_json["articles"][2]["url"]);
+
+        document.getElementById("FOX-img-4").setAttribute("src",headlines_fox_json["articles"][3]["urlToImage"]);
+        document.getElementById("FOX-title-4").innerHTML = headlines_fox_json["articles"][3]["title"];
+        document.getElementById("FOX-title-4").style.fontWeight = 'bold';
+        document.getElementById("FOX-title-4").style.fontSize = '18px';
+        document.getElementById("FOX-description-4").innerHTML = headlines_fox_json["articles"][3]["description"];
+        document.getElementById("FOX-description-4").style.fontSize = '15px';
+        document.getElementById("FOX-href-4").setAttribute("href",headlines_fox_json["articles"][3]["url"]);
+    }
+    window.onload = render_html();
+
+    function word_Cloud(){
+        var XHR = new XMLHttpRequest();
+        XHR.open('GET','http://localhost:5000/api/word_list',true)
+        XHR.onreadystatechange = function () {
+            console.log("Status is: "+this.status);
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                var wordListJson = JSON.parse(XHR.responseText);
+                generateWordCloud(wordListJson);
+            }
+        }
+        XHR.send();
+    }
+    function generateWordCloud(wordListJson){
+        // set the dimensions and margins of the graph
+        // var myWords = wordListJson.wordlist;
+        var myWords = [{'word': 'coronavirus', 'size': 50}, {'word': 'biden', 'size': 22}, {'word': 'tuesday', 'size': 22}, {'word': 'super', 'size': 16}, {'word': 'health', 'size': 16}, {'word': 'death', 'size': 16}, {'word': 'bloomberg', 'size': 16}, {'word': 'fox', 'size': 16}, {'word': 'washington', 'size': 11}, {'word': 'boost', 'size': 11}, {'word': 'officials', 'size': 11}, {'word': 'billion', 'size': 11}, {'word': 'italy', 'size': 11}, {'word': 'vox', 'size': 11}, {'word': 'reports', 'size': 11}, {'word': 'draft', 'size': 11}, {'word': 'report', 'size': 11}, {'word': 'mike', 'size': 11}, {'word': 'times', 'size': 11}, {'word': 'strike', 'size': 11}, {'word': 'deal', 'size': 11}, {'word': 'nbcnews', 'size': 11}, {'word': 'adesanya', 'size': 11}, {'word': 'romero', 'size': 11}, {'word': 'testing', 'size': 11}, {'word': 'joe', 'size': 11}, {'word': 'york', 'size': 11}, {'word': 'push', 'size': 11}, {'word': 'chief', 'size': 5}, {'word': 'justice', 'size': 5}];
+        // set the dimensions and margins of the graph
+        var margin = {top: 4, right: 4, bottom: 4, left: 4},
+            width = 300 - margin.left - margin.right,
+            height = 300 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+        var svg = d3.select("#word_cloud").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+// Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
+// Wordcloud features that are different from one word to the other must be here
+        var layout = d3.layout.cloud()
+            .size([width, height])
+            .words(myWords.map(function(d) { return {text: d.word, size:d.size}; }))
+            .padding(5)        //space between words
+            .rotate(function() { return ~~(Math.random() * 2) * 90; })
+            .fontSize(function(d) { return d.size; })      // font size of words
+            .on("end", draw);
+        layout.start();
+
+// This function takes the output of 'layout' above and draw the words
+// Wordcloud features that are THE SAME from one word to the other can be here
+        function draw(words) {
+            svg
+                .append("g")
+                .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+                .selectAll("text")
+                .data(words)
+                .enter().append("text")
+                .style("font-size", function(d) { return d.size + "px"; })
+                .style("fill", "#000000")
+                .attr("text-anchor", "middle")
+                .style("font-family", "Impact")
+                .attr("transform", function(d) {
+                    return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                })
+                .text(function(d) { return d.text; });
+        }
+    }
+    window.onload=word_Cloud();
+</script>
+
+</body>
+</html>

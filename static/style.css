@@ -1,0 +1,270 @@
+.nav_button{
+    float: left;
+    border: none;
+    margin: 0px;
+    width: 200px;
+    height: 50px;
+    border: 0px;
+    padding: 0px;
+    font-family: Georgia, serif;
+    font-size: medium;
+}
+#btn_news{
+    background-color: #555555;
+    color: #fafafa;
+}
+#btn_search{
+    background-color: lightgray;
+    color: #000000;
+}
+.nav_button:hover{
+    background-color: forestgreen !important;
+    color: #fafafa!important;
+}
+.div-cover{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+.tb_button{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-collapse:collapse;
+}
+.td_button{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+.tr_button{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+#div_left{
+    margin-left: 50px;
+    float: left;
+    width:200px;
+    height: 1000px;
+}
+#div_right{
+    width: 850px;
+    height: 1000px;
+    margin-left: 300px;
+}
+#img_header_left{
+    width: 500px;
+    height: 300px;
+}
+#img_header_right{
+    width: 350px;
+    height: 300px;
+}
+.padding-box{
+    text-align: center;
+}
+.h2_CNN{
+
+}
+.img-header-cover{
+    position: relative;
+    display: inline-block;
+}
+.div-img-text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+}
+.span-header-title{
+    color: #ffffff;
+    font-size: 20px;
+}
+.span-header-description{
+
+}
+.header-cover{
+    height: 300px;
+    margin-right: 30px;
+}
+.img-header{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.img-header-cover{
+    height:300px;
+    width: 500px;
+    /*background-image: url(https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400);*/
+    border: 0px;
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position-x: center;*/
+    /*background-position-y: center;*/
+}
+.td-cover{
+    padding: 0px 0px;
+    margin-left: 5px;
+}
+#word_cloud{
+    height: 300px;
+    width: 300px;
+}
+.img-CNN{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+.img-CNN-cover{
+    height:150px;
+    width: 200px;
+    /*background-image: url(https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400);*/
+    border: 0px;
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position-x: center;*/
+    /*background-position-y: center;*/
+    border-radius: 4px;
+}
+.tb_news{
+    border-top: #000000 solid 1px ;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    table-collapse: collapse;
+}
+.div_new_CNN{
+    margin-top: 10px;
+}
+.div_news_cover_CNN{
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 4px;
+    border: #555555  solid 1px ;
+    background-color: #dddddd;
+    height: 500px!important;
+    /*table-collapse: collapse;*/
+    border-spacing: 0px;
+    text-align: center;
+    height: 100%;
+}
+
+.span-CNN-title{
+    /*margin: 0 auto !important;*/
+    font-size: 18px;
+}
+.span-search-title{
+    /*margin: 0 auto !important;*/
+    font-size: 18px;
+}
+
+.span-CNN-description{
+    /*margin: 0 auto !important;*/
+    font-size: 15px;
+}
+.span-search-description{
+    /*margin: 0 auto !important;*/
+    font-size: 15px;
+    white-space: nowrap!important;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+}
+.oneline{
+    width: inherit;
+    white-space: nowrap!important;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+
+}
+.nocolor:link {
+    color: #000000;
+    text-decoration: none;
+}
+.nocolor:visited {
+    color: #000000;
+    text-decoration: none;
+}
+.nocolor:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+#div_right_search_top{
+    margin-left: 300px;
+    padding:10px;
+    background: lightgray;
+    text-align: center;
+}
+.div_result_news_cover{
+    margin-top: 30px;
+    margin-left: 300px;
+}
+.div_right_search{
+    width: 850px;
+    margin-left: 300px;
+}
+.div_search-news{
+    /*height: 160px;*/
+    background-color: lightgray;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    display: none;
+}
+.div_search-news:hover{
+    box-shadow: 10px 10px 5px darkgray;
+}
+.search-pic{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+.img-search-cover{
+    height:100px;
+    width: 100px;
+    padding: 30px;
+    display: inline-block;
+    /*background-image: url(https://i.insider.com/5e430d873b62b7202f2ed0d4?width=2400);*/
+    border: 0px;
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position-x: center;*/
+    /*background-position-y: center;*/
+}
+.content-cover{
+    padding: 30px;
+    width: 680px;
+    display: inline-block;
+}
+
+#search_showmore_button_cover{
+    padding-top: 15px;
+    text-align: center;
+    display : none;
+}
+#search_showless_button_cover{
+    padding-top: 15px;
+    text-align: center;
+    display : none;
+}
+#myX{
+    cursor: pointer;
+    margin-right: 10px;
+    top: 0;
+    right: 0;
+    color: blueviolet;
+}
+#no_result{
+    padding-top: 15px;
+    text-align: center;
+    display : none;
+}
